@@ -20,6 +20,7 @@ export const useTodosStore = defineStore("todo", {
         title,
         body,
         priority,
+        completed: false,
       });
     },
     removeTodo(id: string) {
