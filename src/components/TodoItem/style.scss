@@ -1,5 +1,55 @@
 .todo-item {
-  color: red;
+  max-width: 400px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(52, 40, 40);
   padding: 20px;
-  border: 1px solid black;
+  border: 1px solid rgb(107, 100, 100);
+  border-radius: 5px;
+  word-wrap: break-word;
+  white-space: normal;
+  overflow: hidden;
+  background-color: #fff;
+
+  &__btn {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 1rem;
+  }
+  & h3,
+  & p,
+  & small {
+    max-width: 100%;
+    white-space: normal;
+    word-wrap: break-word;
+  }
+
+  &--low {
+    background-color: #d1ffd1;
+    border-color: #a0e0a0;
+  }
+
+  &--medium {
+    background-color: #ffffd1;
+    border-color: #e0e0a0;
+  }
+
+  &--high {
+    background-color: #ffd1d1;
+    border-color: #e0a0a0;
+  }
+  &__checkbox {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+  &--completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+  }
 }

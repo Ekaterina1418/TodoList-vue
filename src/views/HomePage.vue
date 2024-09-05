@@ -2,6 +2,8 @@
   <div class="content-center">
     <h1 class="title">Todo List</h1>
     <AddTodo />
+  </div>
+  <div class="content-todos">
     <TodoList />
   </div>
 </template>

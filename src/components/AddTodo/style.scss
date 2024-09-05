@@ -28,4 +28,18 @@
   &__select {
     margin-bottom: 30px;
   }
+  &__button {
+    border: none;
+    background-color: #000;
+    color: #fff;
+    max-width: 150px;
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 5px;
+    margin: 0 auto;
+  }
+  &__error {
+    font-size: 1.2rem;
+    color: red;
+  }
 }

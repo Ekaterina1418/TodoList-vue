@@ -1,9 +1,23 @@
 <template>
-  <div :class="['todo-item', priorityClass]">
+  <div
+    :class="[
+      'todo-item',
+      priorityClass,
+      {
+        'todo-item--completed': todo.completed,
+      },
+    ]"
+  >
+    <button class="todo-item__btn" @click="removeTodo">X</button>
+    <input
+      type="checkbox"
+      class="todo-item__checkbox"
+      v-model="isCompleted"
+      @change="toggleCompletion"
+    />
     <h3>{{ todo.title }}</h3>
     <p>{{ todo.body }}</p>
-    <small>Priority: {{ todo.priority }}</small>
-    <button @click="removeTodo">Удалить</button>
+    <small>{{ todo.priority }}</small>
   </div>
 </template>
 
@@ -16,11 +30,24 @@ const props = defineProps<{ todo: Todo }>();
 const store = useTodosStore();
 
 const priorityClass = computed(() => {
-  return `priority-${props.todo.priority}`;
+  switch (props.todo.priority) {
+    case "Низкая":
+      return "todo-item--low";
+    case "Средняя":
+      return "todo-item--medium";
+    case "Высокая":
+      return "todo-item--high";
+    default:
+      return "";
+  }
 });
+const isCompleted = computed(() => props.todo.completed);
 
 function removeTodo() {
   store.removeTodo(props.todo.id);
+}
+function toggleCompletion() {
+  store.toggleTodoCompletion(props.todo.id);
 }
 </script>
 

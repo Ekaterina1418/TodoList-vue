@@ -1,11 +1,12 @@
 import { defineStore } from "pinia";
 import { v4 as uuidv4 } from "uuid";
-export type Priority = "low" | "medium" | "high";
+export type Priority = "Низкая" | "Средняя" | "Высокая";
 export type Todo = {
   id: string;
   title: string;
   body: string;
   priority: Priority;
+  completed: boolean;
 };
 
 export const useTodosStore = defineStore("todo", {
@@ -23,6 +24,12 @@ export const useTodosStore = defineStore("todo", {
     },
     removeTodo(id: string) {
       this.todos = this.todos.filter((todo) => todo.id !== id);
+    },
+    toggleTodoCompletion(id: string) {
+      const todo = this.todos.find((todo) => todo.id === id);
+      if (todo) {
+        todo.completed = !todo.completed;
+      }
     },
   },
 });

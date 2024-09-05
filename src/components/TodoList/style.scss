@@ -1,0 +1,28 @@
+.todo-column {
+  display: flex;
+  flex: 1 1 100%;
+  flex-direction: column;
+  background-color: rgba(241, 242, 247, 0.974);
+
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 20px;
+  gap: 15px;
+
+  &__title {
+    text-align: center;
+    color: rgb(9, 7, 58);
+  }
+}
+@media (min-width: 900px) {
+  .todo-column {
+    flex: 1 1 calc(20% - 20px);
+    gap: 10px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .todo-column {
+    gap: 5px;
+  }
+}
