@@ -33,4 +33,9 @@ export const useTodosStore = defineStore("todo", {
       }
     },
   },
+  getters: {
+    filteredTodosByPriority: (state) => (priority: Priority) => {
+      return state.todos.filter((todo) => todo.priority === priority);
+    },
+  },
 });

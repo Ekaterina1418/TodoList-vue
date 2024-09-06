@@ -4,7 +4,7 @@
       'todo-item',
       priorityClass,
       {
-        'todo-item--completed': todo.completed,
+        'todo-item--completed': isCompleted,
       },
     ]"
   >
@@ -41,7 +41,10 @@ const priorityClass = computed(() => {
       return "";
   }
 });
-const isCompleted = computed(() => props.todo.completed);
+const isCompleted = computed(() => {
+  const todo = store.todos.find((t) => t.id === props.todo.id);
+  return todo ? todo.completed : false;
+});
 
 function removeTodo() {
   store.removeTodo(props.todo.id);

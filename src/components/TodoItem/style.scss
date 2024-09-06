@@ -20,6 +20,7 @@
     background-color: transparent;
     border: none;
     font-size: 1rem;
+    cursor: pointer;
   }
   & h3,
   & p,
@@ -47,6 +48,7 @@
     position: absolute;
     top: 10px;
     left: 10px;
+    cursor: pointer;
   }
   &--completed {
     text-decoration: line-through;
