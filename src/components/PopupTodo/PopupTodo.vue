@@ -1,15 +1,21 @@
 <template>
-  <div class="modal-overlay" v-if="isOpen">
-    <div class="modal-content">
-      <FormTodo :todo="props.todo" @submit="saveEditTodo" @cancel="closeModal">
+  <div class="modal-overlay" v-if="isOpen" @click="closeModal">
+    <div class="modal-content" @click.stop>
+      <button class="modal-content__open" type="button" @click="closeModal">
+        <img src="../../assets/icons/open.svg" alt="кнопка закрытия" />
+      </button>
+
+      <FormTodo :todo="props.todo" @submit="saveEditTodo">
         <template #date>
           <input type="date" v-model="date" />
         </template>
         <template #buttons>
-          <button class="form-todo__button" type="submit">Сохранить</button>
-          <button class="form-todo__button" type="button" @click="closeModal">
-            Отменить
-          </button>
+          <div class="modal-content__btn">
+            <button class="form-todo__button" type="submit">Сохранить</button>
+            <button class="form-todo__button" type="button" @click="closeModal">
+              Отменить
+            </button>
+          </div>
         </template>
       </FormTodo>
     </div>

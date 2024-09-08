@@ -104,3 +104,6 @@ function cancelEdit() {
   emit("cancel");
 }
 </script>
+<style lang="scss">
+@import "./style.scss";
+</style>

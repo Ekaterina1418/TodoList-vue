@@ -4,16 +4,39 @@
   padding: 20px;
 
   &__link {
+    display: inline-block;
     font-size: 1.5rem;
-    &:hover {
-      color: #42b983;
-      text-decoration: underline;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    position: relative;
+    margin: 10px;
+    &::before,
+    &::after {
+      content: "";
+      border-bottom: solid 1px rgb(42, 15, 15);
+      position: absolute;
+      bottom: 0;
+      width: 0;
+      transition: all 0.2s ease;
+    }
+    &::before {
+      left: 0;
+    }
+    &::after {
+      right: 0;
+    }
+
+    &:focus:before,
+    &:focus::after,
+    &:hover::before,
+    &:hover::after {
+      width: 50%;
     }
   }
 }
 
 .active {
-  color: #42b983;
+  color: #5caaef;
   pointer-events: none;
   text-decoration: none;
 }

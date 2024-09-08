@@ -7,7 +7,3 @@
 <script lang="ts" setup>
 import TodoColumn from "@/components/TodoColumn/TodoColumn.vue";
 </script>
-
-<style lang="scss">
-@import "./style.scss";
-</style>

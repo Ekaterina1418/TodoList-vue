@@ -1,9 +1,9 @@
 .todo-column {
   display: flex;
-  flex: 1 1 100%;
-  flex-direction: column;
-  background-color: rgba(241, 242, 247, 0.974);
 
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(241, 242, 247, 0.974);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   padding: 20px;
@@ -23,6 +23,6 @@
 
 @media (min-width: 1200px) {
   .todo-column {
-    gap: 5px;
+    gap: 15px;
   }
 }

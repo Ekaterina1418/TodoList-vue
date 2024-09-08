@@ -24,6 +24,3 @@ function addTodo(todoData: {
   );
 }
 </script>
-<style lang="scss">
-@import "./style.scss";
-</style>

@@ -15,9 +15,22 @@
   justify-content: center;
   background: #fff;
   border-radius: 5px;
-  padding: 20px;
+  padding: 40px;
   width: 80%;
   max-width: 600px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   position: relative;
+  &__open {
+    border: 0;
+    background: none;
+    width: 30px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  &__btn {
+    display: flex;
+    gap: 20px;
+    margin-top: 40px;
+  }
 }
