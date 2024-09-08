@@ -13,6 +13,9 @@ module.exports = {
     ecmaVersion: 2020,
   },
   rules: {
+    "vue/multi-word-component-names": "off",
+    "import/no-default-export": "off",
+    "vue/no-multiple-template-root": "off",
     "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
     "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
     "prettier/prettier": ["error", { semi: true, endOfLine: "lf" }],

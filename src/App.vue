@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts" setup>
-import HomePage from "@/views/HomePage.vue";
+import Navigation from "@/components/Navigation/Navigation.vue";
 </script>
 
 <style></style>
