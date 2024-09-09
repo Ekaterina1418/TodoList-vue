@@ -25,24 +25,13 @@
 import { ref, defineProps, defineEmits, watch } from "vue";
 import FormTodo from "../FormTodo/FormTodo.vue";
 import { useTodosStore, Todo, Priority } from "@/stores/todo";
+import { formatDate, formatDateForInput } from "@/utils/date";
 
 const store = useTodosStore();
 const date = ref("");
 const isOpen = ref(true);
 const props = defineProps<{ todo: Todo }>();
 const emit = defineEmits<{ (e: "close"): void }>();
-
-function formatDateForInput(dateString: string): string {
-  const [day, month, year] = dateString.split(".");
-  return `${year}-${month}-${day}`;
-}
-
-function formatDate(dateString: string): string {
-  const [year, month, day] = dateString.split("-");
-  return `${String(Number(day)).padStart(2, "0")}.${String(
-    Number(month)
-  ).padStart(2, "0")}.${year}`;
-}
 
 watch(
   () => props.todo,

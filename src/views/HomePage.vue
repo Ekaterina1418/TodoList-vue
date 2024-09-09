@@ -5,7 +5,7 @@
     <AddTodo />
   </div>
   <div class="content-todos">
-    <TodoList />
+    <TodoList v-if="hasTodos > 0" />
   </div>
 </template>
 
@@ -13,4 +13,10 @@
 import AddTodo from "@/components/AddTodo/AddTodo.vue";
 import Navigation from "@/components/Navigation.vue/Navigation.vue";
 import TodoList from "@/components/TodoList/TodoList.vue";
+import { useTodosStore } from "@/stores/todo";
+import { computed } from "vue";
+
+const store = useTodosStore();
+
+const hasTodos = computed(() => store.todos.length);
 </script>
