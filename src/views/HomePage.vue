@@ -11,7 +11,7 @@
 
 <script lang="ts" setup>
 import AddTodo from "@/components/AddTodo/AddTodo.vue";
-import Navigation from "@/components/Navigation.vue/Navigation.vue";
+import Navigation from "@/components/Navigation/Navigation.vue";
 import TodoList from "@/components/TodoList/TodoList.vue";
 import { useTodosStore } from "@/stores/todo";
 import { computed } from "vue";

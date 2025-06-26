@@ -15,7 +15,7 @@
 import { computed } from "vue";
 import TodoItem from "@/components/TodoItem/TodoItem.vue";
 import { useTodosStore } from "@/stores/todo";
-import Navigation from "@/components/Navigation.vue/Navigation.vue";
+import Navigation from "@/components/Navigation/Navigation.vue";
 import BlanckComponent from "@/components/Blanck/BlanckComponent.vue";
 
 const store = useTodosStore();

@@ -10,8 +10,7 @@
 </template>
 <script lang="ts" setup>
 import { defineProps } from "vue";
-
-const props = defineProps<{ title: string }>();
+defineProps<{ title: string }>();
 </script>
 <style lang="scss">
 @import "./style.scss";
