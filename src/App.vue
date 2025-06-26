@@ -4,8 +4,4 @@
   </div>
 </template>
 
-<script lang="ts" setup>
-import Navigation from "@/components/Navigation/Navigation.vue";
-</script>
-
-<style></style>
+<script lang="ts" setup></script>
